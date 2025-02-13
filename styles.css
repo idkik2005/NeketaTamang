@@ -1,0 +1,89 @@
+body {
+    background-color: #ffccdc;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    color: black;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.container {
+    margin-top: 20vh;
+}
+
+.animated-text {
+    font-size: 2em;
+    font-weight: bold;
+    color: black;
+    animation: bounce 1s infinite alternate;
+}
+
+.button {
+    display: inline-block;
+    padding: 15px 30px;
+    background: black;
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+    border-radius: 10px;
+    margin-top: 20px;
+    transition: 0.3s;
+}
+
+.button:hover {
+    background: white;
+    color: black;
+}
+
+.image {
+    width: 250px;
+    height: auto;
+    border-radius: 20px;
+    margin-top: 20px;
+}
+
+.hidden {
+    display: none;
+    color: red;
+    font-size: 1.5em;
+}
+
+@keyframes bounce {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #fce4ec; /* Light pink background for a Valentine's theme */
+    text-align: center;
+    font-family: "Meow Script", cursive;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.animated-text {
+    font-size: 3rem; /* Make text larger */
+    font-family: "Meow Script", cursive;
+}

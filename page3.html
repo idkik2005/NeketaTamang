@@ -1,0 +1,26 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Be My Valentine?</title>
+     <link rel="stylesheet" href="styles.css">
+ </head>
+ <body>
+     <div class="container">
+         <h1 class="animated-text">Will you be my Valentine???</h1>
+         <img src="cat.jpg" alt="Your Picture Here" class="image">
+         <div class="button-group">
+             <a href="page4.html" class="button yes">YESSS :)</a>
+             <button class="button no" onclick="showSadMessage()">NO :(</button>x
+         </div>
+         <p id="sad-message" class="hidden"></p>
+     </div>
+     <script>
+         function showSadMessage() {
+             document.getElementById('sad-message').style.display = 'block';
+         }
+     </script>
+ </body>
+ </html>
+ 
