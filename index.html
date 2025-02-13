@@ -10,17 +10,31 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Meow+Script&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css"> 
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            document.querySelectorAll("a").forEach(link => {
+                link.addEventListener("click", function(event) {
+                    event.preventDefault(); // Stop full page reload
+                    const url = this.href;
+                    
+                    fetch(url)
+                        .then(response => response.text())
+                        .then(html => {
+                            document.body.innerHTML = html; // Load new content
+                        })
+                        .catch(err => console.log("Error loading page", err));
+                });
+            });
+        });
+    </script>      
 </head>
 <body>
-    <audio autoplay loop>
-        <source src="audio/Background-music.mp3.mp3" type="audio/mp3">
-        Your browser does not support the audio tag.
-    </audio>
     <div class="container">
         <h1 class="animated-text">Hi Mayaluu, I have a Surprise for you</h1>
         <img src="pig.jpg" alt="Your Picture Here" class="image">
         <a href="page2.html" class="button">Click Me</a>
+        <iframe src="music.html" style="display: none;"></iframe>
     </div>
 </body>
 </html>

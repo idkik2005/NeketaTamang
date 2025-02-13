@@ -5,12 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Happy Valentine's</title>
     <link rel="stylesheet" href="styles.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            document.querySelectorAll("a").forEach(link => {
+                link.addEventListener("click", function(event) {
+                    event.preventDefault(); // Stop full page reload
+                    const url = this.href;
+                    
+                    fetch(url)
+                        .then(response => response.text())
+                        .then(html => {
+                            document.body.innerHTML = html; // Load new content
+                        })
+                        .catch(err => console.log("Error loading page", err));
+                });
+            });
+        });
+    </script>    
 </head>
 <body>
     <div class="container">
         <h1 class="animated-text">Happyyy Valentines Day, Merii Motiii</h1>
         <img src="prom.jpg" alt="Your Picture Here" class="image">
         <a href="page3.html" class="button">Click Me</a>
+        <iframe src="music.html" style="display: none;"></iframe>
     </div>
 </body>
 </html>
